@@ -1,0 +1,78 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+h1 {
+  margin: 2.5rem 0;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.gridContainer {
+  display: grid;
+  gap: 3rem;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.gridItem {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: gray;
+  border: 2px solid black;
+  font-size: 1.5rem;
+}
+
+.gridItem h3 {
+  align-self: end;
+  padding: 0.5rem 4rem;
+  background-color: blueviolet;
+  color: white;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+}
+
+.gridItem p {
+  padding: 0 1rem 0.5rem 1rem;
+}
+
+@media screen and (min-width: 992px) {
+  .gridContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+}
